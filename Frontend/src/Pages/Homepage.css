@@ -1,0 +1,83 @@
+/* --- Global Resets (Optional: better placed in index.css) --- */
+/* This ensures the page hits the very edge of the screen */
+.homepage {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-main {
+  width: 100%;
+  flex: 1;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  width: 100%;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  color: white;
+  margin-bottom: 3rem;
+  box-sizing: border-box; /* Prevents padding from causing scrollbars */
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* --- Cards Section --- */
+.cards-section {
+  padding: 0 2rem 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+  
+  .cards-section {
+    padding: 0 1rem 2rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
